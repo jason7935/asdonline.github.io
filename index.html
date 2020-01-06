@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>ASD Online</title>
-  <link href="https://fonts.googleapis.com/css?family=Roboto:300&display=swap" rel="stylesheet" /> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300&display=swap" rel="stylesheet"> 
   <style>
     h1 {
 	font-size: 40px;
@@ -26,20 +26,34 @@
 	border: 3px solid blue;
 	border-radius: 5px;
     }
+    span {
+	font-size: 5em;
+    }
     </style>
 </head>
+<script>
+  function litReviewGrade() {
+      document.getElementById("cool").innerHTML = (100 - Math.round(30 * Math.random())) + "%";
+  }
+</script>
 <body>
-<h1>ASD Online (Alpha)</h1>
+<h1>ASD Online</h1>
 <p><a href="http://asdnh.org">ASD website</a></p>
 <br />
 <p><a href="http://classroom.google.com">Google Classroom</a></p>
 <br />
-<p><a href="http://mail.asdnh.org">Google Mail</a></p>
+<p><a href="https://mail.asdnh.org">Google Mail</a></p>
 <br />
 <p><a href="https://focus.asdnh.org">Focus Gradebook</a></p>
 <br />
-<p><a href="http://inside.asdnh.org">Inside ASD</a></p>
+<p><a href="https://inside.asdnh.org">Inside ASD</a></p>
 <br />
-<p><a href="https://www.youtube.com/user/Engineer4Free">Foundations of Engineering Help</a></p>
+<p><a href="https://www.youtube.com/user/Engineer4Free">Foundations of Engineering</a></p>
+<br />
+<span><button onclick="litReviewGrade()">Click here for your lit review grade</button></span>
+<br />
+<br />
+<span class="x" id="cool"></span>
 </body>
 </html>
+
