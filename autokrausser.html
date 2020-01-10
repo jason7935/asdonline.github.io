@@ -15,19 +15,29 @@
     </style>
     <script>
       function autoKrausser() {
-	  document.getElementById("cool").innerHTML = (100 - Math.round(30 * Math.random())) + "%";
+	  return (100 - Math.round(30 * Math.random())) + "%";
       }
       function autoCashiner() {
-	  document.getElementById("cool").innerHTML = (Math.random() > .25 ? 100 - Math.round(10 * Math.random()) : 50 - Math.round(20 * Math.random())) + "%";
+	  return (Math.random() > .25 ? 100 - Math.round(10 * Math.random()) : 50 - Math.round(20 * Math.random())) + "%";
+      }
+      function autoSayre() {
+	  var randString = ["White Savior", "Libertarian Socialism", "Feminist"]
+	  return Math.random() > .25 ?
+	      (100 - Math.round(5 * Math.random())) + "%"
+	      : randString[Math.floor(Math.random()*randString.length)];
+      }
+      function autoMacMahon() {
+	  return Math.random() > .5 ? (100 - Math.round(50 * Math.random())) + "%" : "Not Graded";
       }
       function genGrade() {
 	  var obj = document.getElementById("select");
-	  var selected = obj.options[obj.selectedIndex].text;
-	  if (selected == "Mr. Kraus") {
-	      autoKrausser();
-	  } else if (selected == "Mrs. Cashin") {
-	      autoCashiner();
-	  }
+	  var sel = obj.options[obj.selectedIndex].text;
+	  document.getElementById("cool").innerHTML =
+	      sel == "Mr. Kraus" ? autoKrausser() :
+	      sel == "Mrs. Cashin" ? autoCashiner() :
+	      sel == "Mr. MacMahon" ? autoMacMahon() :
+	      sel == "Mz. Sayre" ? autoSayre() :
+	      "Teacher not selected.";
       }
     </script>
   </head>
@@ -40,6 +50,8 @@
     <select id="select">
       <option>Mr. Kraus</option>
       <option>Mrs. Cashin</option>
+      <option>Mr. MacMahon</option>
+      <option>Mz. Sayre</option>
     </select>
     </div>
     <div>
