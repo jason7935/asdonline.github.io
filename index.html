@@ -3,15 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <title>ASD Online</title>
-  <link href="https://fonts.googleapis.com/css?family=Roboto:300&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Orbitron:400,700" rel="stylesheet"> 
+  <link href="css/all.css" rel="stylesheet">
   <style>
     h1 {
 	font-size: 40px;
-	font-family: 'Roboto';
+	font-family: 'Orbitron';
+	font-weight: bold;
     }
     body {
 	text-align: center;
-	background: white;
+	background: #ddd;
+	margin: 0;
+    }
+    #banner {
+	text-align: center;
+	background-color: #041a3d;
+	padding: 1px 0;
+	color: #ddd;
+    }
+    .orbitron {
+	color: #041a3d;
+	font-family: 'Orbitron';
+	font-size: 30px;
     }
     a {
 	font-family: 'Roboto';
@@ -21,26 +36,25 @@
     a:visited {
 	color: blue;
     }
-    p {
+    .column p {
 	padding: 5px;
 	border: 3px solid transparent;
 	display: inline-block;
     }
-    p:hover {
+    .column p:hover {
 	border: 3px solid blue;
 	border-radius: 5px;
     }
-    div {
+    .column {
 	display: inline-block;
 	padding: 5em;
     }
   </style>
 </head>
 <body>
-<img src="asd.jpg" />
-<img src="online.png" />
-<br />
-<div>
+<div id="banner"><h1><i class="fas fa-atom"></i> Academy for Science and Design <i class="fas fa-atom"></i></h1></div>
+<p class="orbitron">Now Online! <i class="fas fa-cloud"></i></p>
+<div class="column">
 <p><a href="http://asdnh.org">ASD website</a></p>
 <br />
 <p><a href="http://classroom.google.com">Google Classroom</a></p>
@@ -51,19 +65,23 @@
 <br />
 <p><a href="yearbook.html">Communist Yearbook</a></p>
 <br />
-<p><a href="http://chng.it/dHFJhq7f2n">AP Physics Hargrove Petition</a></p>
 </div>
-<div>
+<div class="column">
+<p><a href="http://chng.it/dHFJhq7f2n">AP Physics Hargrove Petition</a></p>
+<br />
 <p><a href="https://inside.asdnh.org">Inside ASD</a></p>
 <br />
 <p><a href="https://www.youtube.com/user/Engineer4Free">Foundations of Engineering</a></p>
-<br />
-<p><a href="hargrove.html">Admin and Staff</a></p>
 <br />
 <p><a href="autokrausser.html">Autokrausser</a></p>
 <br />
 <p><a href="https://bit.ly/3a5qV6F">ASD News</a></p>
 </div>
+<p class="orbitron">
+  Staff<br /><br />
+  Dr. Alexander Hargrove (ScD)<br /><br />
+  Dr. Christopher Marsh (PsyD)<br /><br />
+  Dr. Joseph Cote II (PhD)</p>
 </body>
 </html>
 
