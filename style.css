@@ -1,0 +1,42 @@
+    h1 {
+	font-size: 40px;
+	font-family: 'Orbitron';
+	font-weight: bold;
+    }
+    body {
+	text-align: center;
+	background: #ddd;
+	margin: 0;
+    }
+    #banner {
+	text-align: center;
+	background-color: #041a3d;
+	padding: 1px 0;
+	color: #ddd;
+    }
+    .orbitron {
+	color: #041a3d;
+	font-family: 'Orbitron';
+	font-size: 30px;
+    }
+    a {
+	font-family: 'Roboto';
+	font-size: 25px;
+	text-decoration: none;
+    }
+    a:visited {
+	color: blue;
+    }
+    .column p {
+	padding: 5px;
+	border: 3px solid transparent;
+	display: inline-block;
+    }
+    .column p:hover {
+	border: 3px solid blue;
+	border-radius: 5px;
+    }
+    .column {
+	display: inline-block;
+	padding: 5em;
+    }

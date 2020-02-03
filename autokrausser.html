@@ -2,17 +2,10 @@
   <head>
     <meta charset="UTF-8">
     <title>Autokrausser</title>
-    <style>
-      body {
-	  text-align: center;
-      }
-      div {
-	  display: inline-block;
-      }
-      span {
-	  font-size: 5em;
-      }
-    </style>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Orbitron:400,700" rel="stylesheet"> 
+    <link href="css/all.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
     <script>
       function autoKrausser() {
 	  return (100 - Math.round(30 * Math.random())) + "%";
@@ -42,24 +35,18 @@
     </script>
   </head>
   <body>
-    <h1>Autokrausser</h1>
-    <div>
-      <p>Please select teacher:</p>
-    </div>
-    <div>
+    <div id="banner"><h1><i class="fas fa-atom"></i> Academy for Science and Design <i class="fas fa-atom"></i></h1></div>
+    <p class="orbitron">Now Online! <i class="fas fa-cloud"></i><br /><br />Autokrausser<br /><br />Please select teacher:<br /></p>
     <select id="select">
       <option>Mr. Kraus</option>
       <option>Mrs. Cashin</option>
       <option>Mr. MacMahon</option>
       <option>Mz. Sayre</option>
     </select>
-    </div>
-    <div>
       <button onclick="genGrade()">Generate Grade</button>
-    </div>
     <br />
-    <span id="cool"></span>
+    <span id="cool" style="font-size: 5em"></span>
     <br />
-    <p>For more teachers, <a href="https://bit.ly/2R0X4ng">get Autokrausser Premium!</a></p>
+    <p>For more teachers,<br /><a href="https://bit.ly/2R0X4ng">get Autokrausser Premium!</a></p>
   </body>
 </html>
