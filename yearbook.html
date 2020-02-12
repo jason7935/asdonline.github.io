@@ -1,11 +1,35 @@
+<!DOCTYPE html>
 <html>
-  <head>
-    <style>
-      body {
-	  background-image: url("soviet.png");
-      }
-    </style>
-  </head>
-  <body>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <title>Anarcho-Yearbook</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Orbitron:400,700" rel="stylesheet"> 
+  <link href="css/all.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+  <script>
+    window.onload = function() {
+    var images = document.getElementById("quotes").getElementsByTagName('img');
+    for(var i = 0; i < images.length; i++) {
+	images[i].setAttribute("align", "middle");
+	images[i].setAttribute("width", "5%");
+	images[i].setAttribute("src", randomImage());
+    }
+    }
+    function randomImage() {
+	return "trump/" + Math.ceil(Math.random() * 6) + ".webp";
+    }
+    </script>
+</head>
+<body>
+<div id="banner"><h1><i class="fas fa-book"></i> Anarcho-Yearbook <i class="fas fa-book"></i></h1></div>
+<p class="orbitron">The best yearbook without a state! </p>
+<div id="quotes" style="text-align: left; margin-left: 5em; font-family: Roboto; font-size: 1.5em">
+  <h2>Junior Quotes</h2>
+  <p><img> <strong>Jason Scott</strong> - Fossil fuels are the future for America. If you're gonna lose, quit now!</p>
+  <p><img> <strong>Arthur McLaughlin</strong> - We need to build a firewall! The firewall just got 10 feet higher!</p>
+  <p><img> <strong>Haider Khan</strong> - I can't park!</p>
+  <p><img> <strong>Timothy Bilik</strong> - When I die, I want the people I did group projects with to lower me into my grave so they can let me down one last time.</p>
+  </div>
 </html>
+
