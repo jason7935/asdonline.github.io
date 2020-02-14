@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>ASD Online</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Orbitron:400,700" rel="stylesheet"> 
+  <link href="css/all.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+<div id="banner"><h1><i class="fas fa-atom"></i> Academy for Science and Design <i class="fas fa-atom"></i></h1></div>
+<p class="orbitron">Now Online! <i class="fas fa-cloud"></i></p>
+<div class="column">
+<p><a href="http://asdnh.org">ASD website</a></p>
+<br />
+<p><a href="http://classroom.google.com">Google Classroom</a></p>
+<br />
+<p><a href="http://mail.asdnh.org">Google Mail</a></p>
+<br />
+<p><a href="https://focus.asdnh.org">Focus Gradebook</a></p>
+<br />
+<p><a href="yearbook.html">Anarcho-Yearbook</a></p>
+<br />
+<p><a href="https://www.snowdaycalculator.com/prediction.php?zipcode=03063&snowdays=4&extra=0&">ASD Snow Day Calculator</a></p>
+<br />
+</div>
+<div class="column">
+<p><a href="http://chng.it/dHFJhq7f2n">AP Physics Hargrove Petition</a></p>
+<br />
+<p><a href="http://inside.asdnh.org">Inside ASD</a></p>
+<br />
+<p><a href="https://www.youtube.com/user/Engineer4Free">Foundations of Engineering</a></p>
+<br />
+<p><a href="autokrausser.html">Autokrausser</a></p>
+<br />
+<p><a href="https://bit.ly/3a5qV6F">ASD News</a></p>
+</div>
+<p class="orbitron">
+  Staff<br /><br />
+  Dr. Linus Torvalds (Linux)<br /><br />
+  Dr. Alex Hargrove (ScD)<br /><br />
+  Dr. Christopher Marsh (PsyD)<br /><br />
+  Dr. Joseph Cote II (PhD)</p>
+</body>
+</html>
+
