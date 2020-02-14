@@ -7,11 +7,34 @@
   <link href="https://fonts.googleapis.com/css?family=Orbitron:400,700" rel="stylesheet"> 
   <link href="css/all.css" rel="stylesheet">
   <link href="style.css" rel="stylesheet">
+  <script>
+    function isYesSelected(x) {
+	return document.querySelector('input[name="' + x + '"]:checked').value == "yes";
+    }
+    function genChance () {
+	var chance = parseInt(document.getElementById("chance").value, 10) * 2;
+	if (document.getElementById("cylinders").value > 4) chance -= 10;
+	if (isYesSelected("zhou")) chance += 10;
+	if (isYesSelected("ice")) chance += 10;
+	if (isYesSelected("ws")) chance -= 10;
+	if (isYesSelected("ian")) chance += 20;
+	if (isYesSelected("diesel")) chance -= 10;
+	if (isYesSelected("hargrove")) chance += 5;
+	if (isYesSelected("yaris")) chance += 15;
+	chance *= 0.7;
+	if (isYesSelected("slid") || isYesSelected("corona")) chance = 100;
+	document.getElementById("cool").innerHTML = chance + "%";
+    }
+    </script>
 </head>
 <body>
 <div id="banner"><h1><i class="fas fa-atom"></i> Academy for Science and Design <i class="fas fa-atom"></i></h1></div>
 <p class="orbitron">Snow Day Calculator <i class="fas fa-snowflake"></i></p>
 <form style="font-family: Roboto; font-size: 1.3em; text-align: left; margin-left: 40%">
+  What is the Snow Day Calculator Chance?<br />
+  <input type="text" id="chance" name="chance"><br /><br />
+  How many cylinders does your vehicle have?<br />
+  <input type="text" id="cylinders" name="chance"><br /><br />
   Is Jason Zhou driving?<br />
   <input type="radio" name="zhou" value="yes">Yes<br />
   <input type="radio" name="zhou" value="no">No<br /><br />
@@ -40,7 +63,8 @@
   <input type="radio" name="corona" value="yes">Yes<br />
   <input type="radio" name="corona" value="no">No<br /> <br />
   </form>
-
+<button onclick="genChance()">Generate Chance</button><br />
+<span id="cool" style="font-size: 5em;"></span><br />
 </body>
 </html>
 
