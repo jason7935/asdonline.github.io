@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>MacMahon LEQ Calculator</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Orbitron:400,700" rel="stylesheet"> 
+  <link href="css/all.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+  <script>
+    var numOfSoundLevels = 0;
+    window.onload = function() {
+	addForm();
+    }
+    function isYesSelected(x) {
+	return document.querySelector('input[name="' + x + '"]:checked').value == "yes";
+    }
+    function genChance () {
+	var totalPressure = 0;
+	var totalTime = 0;
+	for (var i = 0; i < numOfSoundLevels; i++) {
+	    totalPressure += parseFloat(document.getElementById("" + (i * 2 + 2)).value) * Math.pow(10, parseFloat(document.getElementById("" + (i * 2 + 1)).value)/10);
+	    totalTime += parseFloat(document.getElementById("" + (i * 2 + 2)).value);
+	}
+	document.getElementById("cool").innerHTML = (10 * Math.log10(totalPressure/totalTime)).toFixed(3) + " dB";
+	    
+    }
+    function addForm() {
+	var fm = document.getElementById("form");
+	fm.insertAdjacentHTML("beforeend", "dB level: <input type='text' id='" + (numOfSoundLevels * 2 + 1) + "'> time period: <input type='text' id='" + (numOfSoundLevels * 2 + 2) + "'><br />"); 
+	numOfSoundLevels++;
+    }
+    </script>
+</head>
+<body>
+<div id="banner"><h1><i class="fas fa-atom"></i> Academy for Science and Design <i class="fas fa-atom"></i></h1></div>
+<p class="orbitron">MacMahon L<sub>EQ</sub> Calculator</p>
+<button onclick="addForm()">Add more data</button> <button onclick="genChance()">Calculate LEQ</button>
+<br />
+<br />
+<form id="form" style="font-family: Roboto; font-size: 1.3em;">
+</form>
+<br />
+<span id="cool" style="font-size: 5em;"></span><br />
+</body>
+</html>
+
